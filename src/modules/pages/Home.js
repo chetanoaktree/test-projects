@@ -133,7 +133,7 @@ export default function Dashboard(props) {
             {data.length > 0 && data.map((row, index) =>
               index >= minIndex &&
               index < maxIndex && (
-                <Col><a onClick={() => showModal(row)}><PokemonCard {...row} /></a></Col>
+                <Col key={index}><a onClick={() => showModal(row)}><PokemonCard {...row} /></a></Col>
             ))}
             </Row>
             {isData && 
