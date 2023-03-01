@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image'
 import { Avatar, Card } from 'antd';
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 
@@ -12,10 +13,13 @@ const PokemonCard = (props) => (
     width: 300,
     }}
     cover={
-    <img
-        alt={props.name}
-        src={props.ThumbnailImage}
-    />
+        <Image
+          alt={props.name}
+          src={props.ThumbnailImage}
+          width={300}
+          height={300}
+
+        />
     }
     actions={props.type}
     >

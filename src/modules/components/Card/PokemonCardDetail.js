@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image'
 import { Card, Row, Col } from 'antd';
 
 
@@ -14,10 +15,12 @@ const PokemonCardDetail = (props) => (
         <Col span={12}>
             <Card
             cover={
-            <img
-                alt={props.name}
-                src={props.ThumbnailImage}
-            />
+                <Image
+                  alt={props.name}
+                  src={props.ThumbnailImage}
+                  width={500}
+                  height={500}
+                />
             }
             bordered={false}
             >
